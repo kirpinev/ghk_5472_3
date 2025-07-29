@@ -15,16 +15,18 @@ import { useState } from "react";
 import { ThxLayout } from "./thx/ThxLayout.tsx";
 
 export const App = () => {
-  const [isLoading, setIsLoading] = useState(false);
   const [thxShow, setThxShow] = useState(LS.getItem(LSKeys.ShowThx, false));
 
-  const submit = () => {
-    setIsLoading(true);
-    Promise.resolve().then(() => {
-      setIsLoading(false);
-      LS.setItem(LSKeys.ShowThx, true);
-      setThxShow(true);
+  const count = () => {
+    window.gtag("event", "5472_get_sub", {
+      variant_name: "5472_3",
     });
+  };
+
+  const submit = () => {
+    count();
+    LS.setItem(LSKeys.ShowThx, true);
+    setThxShow(true);
   };
 
   if (thxShow) {
@@ -170,8 +172,8 @@ export const App = () => {
       <Gap size={72} />
 
       <div className={appSt.bottomBtn}>
-        <ButtonMobile block loading={isLoading} view="primary" onClick={submit}>
-          Расчитать
+        <ButtonMobile block view="primary" onClick={submit}>
+          Рассчитать
         </ButtonMobile>
       </div>
     </>
