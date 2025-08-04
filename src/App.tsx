@@ -39,12 +39,11 @@ export const App = () => {
         <img src={hero} alt="" style={{ borderRadius: "1rem" }} />
         <Gap size={16} />
         <Typography.TitleResponsive tag="h1" view="medium" font="system">
-          Калькулятор социальных выплат
+          Калькулятор выплат
         </Typography.TitleResponsive>
         <Gap size={8} />
         <Typography.Text view="primary-medium" tag="p" defaultMargins={false}>
-          Узнайте какие детские пособия вам положены. Введите нужные данные, и
-          калькулятор автоматически посчитает ежемесячную выплату.
+          Узнайте, сколько вы можете получать от государства за детей
         </Typography.Text>
 
         <Gap size={24} />
@@ -77,7 +76,7 @@ export const App = () => {
                 tag="p"
                 defaultMargins={false}
               >
-                Опишите вашу семью
+                Вы заполняете анкету
               </Typography.Text>
               <Typography.Text
                 view="primary-small"
@@ -85,7 +84,7 @@ export const App = () => {
                 color="secondary"
                 defaultMargins={false}
               >
-                Ответив на несколько вопросов
+                В ней будет несколько вопросов о вас и ваших детях
               </Typography.Text>
             </div>
           </div>
@@ -107,7 +106,7 @@ export const App = () => {
                 tag="p"
                 defaultMargins={false}
               >
-                Сервис произведет расчеты
+                Мы считаем сумму выплат
               </Typography.Text>
               <Typography.Text
                 view="primary-small"
@@ -115,7 +114,7 @@ export const App = () => {
                 color="secondary"
                 defaultMargins={false}
               >
-                Они будут поделены на категории
+                Всё будет поделено на категории
               </Typography.Text>
             </div>
           </div>
@@ -137,7 +136,7 @@ export const App = () => {
                 tag="p"
                 defaultMargins={false}
               >
-                Выберете и подайте заявление
+                Вы подаёте заявку на выплаты
               </Typography.Text>
               <Typography.Text
                 view="primary-small"
@@ -145,7 +144,7 @@ export const App = () => {
                 color="secondary"
                 defaultMargins={false}
               >
-                На доступную соц выплату, через Госуслуги
+                Онлайн через Госуслуги или офлайн через ведомство
               </Typography.Text>
             </div>
           </div>
@@ -163,8 +162,7 @@ export const App = () => {
         >
           <img src={img4} alt="" width={40} height={40} />
           <Typography.Text view="primary-small" tag="p" defaultMargins={false}>
-            Для оформления понадобятся логин и пароль от учётной записи на
-            Госуслугах
+            Нужен будет доступ к Госуслугам
           </Typography.Text>
         </div>
       </div>
@@ -173,7 +171,7 @@ export const App = () => {
 
       <div className={appSt.bottomBtn}>
         <ButtonMobile block view="primary" onClick={submit}>
-          Рассчитать
+          Посчитать
         </ButtonMobile>
       </div>
     </>
