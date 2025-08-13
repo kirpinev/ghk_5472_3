@@ -162,7 +162,7 @@ export const App = () => {
         >
           <img src={img4} alt="" width={40} height={40} />
           <Typography.Text view="primary-small" tag="p" defaultMargins={false}>
-            Нужен будет доступ к Госуслугам
+            Понадобится подтверждённый профиль на Госуслугах
           </Typography.Text>
         </div>
       </div>
